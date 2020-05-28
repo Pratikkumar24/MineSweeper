@@ -28,6 +28,6 @@ int main()
         cout << "\n Wrong Option";
     }
     minesweeper m(row, col);
-    m.Initialize();
+    m.startGame();
     return 0;
 }

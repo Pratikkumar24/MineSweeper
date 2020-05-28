@@ -4,11 +4,17 @@ void minesweeper::Initialize() //Initializing the board and numbers
 {
     InitializeBoard();
     InitializingNumbers();
-    startGame();
 }
 
 void minesweeper::InitializeBoard() //Initializing the board
 {
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            board[i][j] = '0';
+        }
+    }
     srand(time(0));
     for (int i = 0; i < rows; i++)
     {
@@ -16,16 +22,16 @@ void minesweeper::InitializeBoard() //Initializing the board
         int c = rand() % col;
         board[r][c] = '*';
     }
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < col; j++)
-        {
-            if (board[i][j] != '*')
-            {
-                board[i][j] = '0';
-            }
-        }
-    }
+    // for (int i = 0; i < rows; i++)
+    // {
+    //     for (int j = 0; j < col; j++)
+    //     {
+    //         if (board[i][j] != '*')
+    //         {
+    //             board[i][j] = '0';
+    //         }
+    //     }
+    // }
 
     for (int i = 0; i < rows; i++)
     {
