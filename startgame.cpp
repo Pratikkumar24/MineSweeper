@@ -108,7 +108,6 @@ void minesweeper::startGame()
     cin >> r >> c;
     if (board[r][c] == '*')
     {
-        // cout << "\n\t\n\tOOPS!!! SORRY BAD LUCK \nIN STARTING ONLY YOU STEPPED ON THE MINE :P\n";
         Initialize();
     }
 
